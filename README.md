@@ -3,16 +3,20 @@
 The code and files contained in this repository support replication of a regional benthic habitat classification of the South Atlantic produced by McQuaid et al. (in prep). We used statistical clustering algorithms to classify broad-scale (10km2) environmental data into distinct habitat classes, which reflect variation in physical conditions and we assume support distinct biological communities. 
 
 Process for running the script:
+
 Step 1: Run [insert script name]
+
 Step 2: Run [insert script name]
+
 Step 3: Run [insert script name], using classification outputs of Step 2 as inputs
+
 Step 3: Run [insert script name], using classification outputs of Step 3 as inputs
 
 Folder/file descriptions:
 
 Input raster datasets are available at the following sites:
-| Variable     | Description      | Source     |
-| ------------- | ------------- | -------- |
+| Variable     | Description      | Manipulation     |  Source |
+| ------------- | ------------- | -------- |  -------- |
 | Depth  | Continuous bathymetric model | Resampled to 5 arc min resolution |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
 | BBPI  | Measure of where a referenced location is relative to the locations surrounding it |Created in ArcGIS from depth data using Benthic Terrain Modeler extension. Inner radius 1, outer radius 10, scale factor is ∼100km |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
 | FBPI  | Measure of where a referenced location is relative to the locations surrounding it | Created in ArcGIS from depth data using Benthic Terrain Modeler extension. Inner radius 1, outer radius 2, scale factor is ∼10km | https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/  |
