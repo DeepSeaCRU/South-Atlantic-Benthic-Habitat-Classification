@@ -5,9 +5,9 @@ The code and files contained in this repository support replication of a regiona
 __Process for running the scripts:__
 * Step 1: Run the non-hierarchical approach using the script "NHApproach NP Clustering & Final Classification.R" and inputs from the table below
 * Step 2: Run Level 1 of the hierarchical approach using the script "HApproach Level1 - PCAs NP.R" and inputs from the table below
-<br /> Step 3: Produce a confidence layer for Level 1 of the hierarchical approach using the script "HApproach Level1 - confusion Index.R"
-<br /> Step 4: Run Level 2 of the hierarchical approach using the script "HApproach_Level2,3_RScript NP.R" and the classification outputs of Step 3 (Level 1) as inputs
-<br /> Step 5: Adapt the script "HApproach_Level2,3_RScript NP.R" to run Level 3 of the hierarchical approach using the classification outputs of Step 4 (Level 2) as inputs
+* Step 3: Produce a confidence layer for Level 1 of the hierarchical approach using the script "HApproach Level1 - confusion Index.R"
+* Step 4: Run Level 2 of the hierarchical approach using the script "HApproach_Level2,3_RScript NP.R" and the classification outputs of Step 3 (Level 1) as inputs
+* Step 5: Adapt the script "HApproach_Level2,3_RScript NP.R" to run Level 3 of the hierarchical approach using the classification outputs of Step 4 (Level 2) as inputs
 
 <br /> 
 <br /> __Folder/file descriptions:__
