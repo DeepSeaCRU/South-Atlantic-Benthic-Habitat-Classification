@@ -4,12 +4,9 @@ The code and files contained in this repository support replication of a regiona
 
 Process for running the script:
 <br /> Step 1: Run [insert script name]
-
-Step 2: Run [insert script name]
-
-Step 3: Run [insert script name], using classification outputs of Step 2 as inputs
-
-Step 3: Run [insert script name], using classification outputs of Step 3 as inputs
+<br /> Step 2: Run [insert script name]
+<br /> Step 3: Run [insert script name], using classification outputs of Step 2 as inputs
+<br /> Step 3: Run [insert script name], using classification outputs of Step 3 as inputs
 
 Folder/file descriptions:
 
