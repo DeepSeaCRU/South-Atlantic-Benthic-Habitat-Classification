@@ -2,15 +2,16 @@
 
 The code and files contained in this repository support replication of a regional benthic habitat classification of the South Atlantic produced by McQuaid et al. (in prep). We used statistical clustering algorithms to classify broad-scale (10km2) environmental data into distinct habitat classes, which reflect variation in physical conditions and we assume support distinct biological communities. 
 
-Process for running the scripts:
-<br /> - Step 1: Run the non-hierarchical approach using the script "NHApproach NP Clustering & Final Classification.R" and inputs from the table below
-<br /> - Step 2: Run Level 1 of the hierarchical approach using the script "HApproach Level1 - PCAs NP.R" and inputs from the table below
-<br /> - Step 3: Produce a confidence layer for Level 1 of the hierarchical approach using the script "HApproach Level1 - confusion Index.R"
-<br /> - Step 4: Run Level 2 of the hierarchical approach using the script "HApproach_Level2,3_RScript NP.R" and the classification outputs of Step 3 (Level 1) as inputs
-<br /> - Step 5: Adapt the script "HApproach_Level2,3_RScript NP.R" to run Level 3 of the hierarchical approach using the classification outputs of Step 4 (Level 2) as inputs
+__Process for running the scripts:__
+*Step 1: Run the non-hierarchical approach using the script "NHApproach NP Clustering & Final Classification.R" and inputs from the table below
+*Step 2: Run Level 1 of the hierarchical approach using the script "HApproach Level1 - PCAs NP.R" and inputs from the table below
+*Step 3: Produce a confidence layer for Level 1 of the hierarchical approach using the script "HApproach Level1 - confusion Index.R"
+*Step 4: Run Level 2 of the hierarchical approach using the script "HApproach_Level2,3_RScript NP.R" and the classification outputs of Step 3 (Level 1) as inputs
+*Step 5: Adapt the script "HApproach_Level2,3_RScript NP.R" to run Level 3 of the hierarchical approach using the classification outputs of Step 4 (Level 2) as inputs
 
 
-Folder/file descriptions:
+
+__Folder/file descriptions:__
 | Folder/file name     | Description |    
 | ------------- | ------------- | 
 | scripts     |  Contains scripts to run the analyses |
@@ -20,7 +21,8 @@ Folder/file descriptions:
 | HApproach Level1 - confusion Index.R   |  Production of confidence layers using a confusion index for Level 1 outputs of the hierarchical approach |
 | HApproach_Level2,3_RScript NP.R  |  Data preparation, Principal Component Analysis and clustering for Level 2 of the hierarchical approach |
 
-Input raster datasets are available at the following sites:
+
+__Input raster datasets are available at the following sites:__
 | Variable     | Description      | Manipulation     |  Source |
 | ------------- | ------------- | -------- |  -------- |
 | Depth  | Continuous bathymetric model | Resampled to 5 arc min resolution |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
