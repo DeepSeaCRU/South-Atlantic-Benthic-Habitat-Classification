@@ -2,8 +2,6 @@
 
 The code and files contained in this repository support replication of a regional benthic habitat classification of the South Atlantic produced by McQuaid et al. (in prep). We used statistical clustering algorithms to classify broad-scale (10km2) environmental data into distinct habitat classes, which reflect variation in physical conditions and we assume support distinct biological communities. 
 
-******* LINE ON CONDITIONS OF USE? *******
-
 Process for running the script:
 <br /> Step 1: Run [insert script name]
 <br /> Step 2: Run [insert script name]
