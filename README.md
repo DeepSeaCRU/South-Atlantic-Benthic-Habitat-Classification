@@ -13,12 +13,12 @@ The code and files contained in this repository support replication of a regiona
 <br /> __Folder/file descriptions:__
 | Folder/file name     | Description |    
 | ------------- | ------------- | 
-| scripts     |  Contains scripts to run the analyses |
-| layers     |  Contains mask for South Atlantic used in this study, biogeography layer produced for this study, and output habitat classifications for the hierarchical and non-hierarchical approaches |
-| NHApproach NP Clustering & Final Classification.R    |  Data preparation, clustering, final classification and production of confidence layers for the non-hierarchical approach |
-| HApproach Level1 - PCAs NP.R   |  Data preparation, Principal Component Analysis and clustering for Level 1 of the hierarchical approach |
-| HApproach Level1 - confusion Index.R   |  Production of confidence layers using a confusion index for Level 1 outputs of the hierarchical approach |
-| HApproach_Level2,3_RScript NP.R  |  Data preparation, Principal Component Analysis and clustering for Level 2 of the hierarchical approach |
+| scripts     |  Folder containing scripts to run the analyses |
+| layers     |  Folder containing mask for South Atlantic used in this study, biogeography layer produced for this study, and output habitat classifications for the hierarchical and non-hierarchical approaches |
+| NHApproach NP Clustering & Final Classification.R    |  R script for data preparation, clustering, final classification and production of confidence layers for the non-hierarchical approach |
+| HApproach Level1 - PCAs NP.R   |  R script for data preparation, Principal Component Analysis and clustering for Level 1 of the hierarchical approach |
+| HApproach Level1 - confusion Index.R   |  R script for production of confidence layers using a confusion index for Level 1 outputs of the hierarchical approach |
+| HApproach_Level2,3_RScript NP.R  |  R script for data preparation, Principal Component Analysis and clustering for Level 2 of the hierarchical approach |
 
  
 <br /> __Input raster datasets are available at the following sites:__
