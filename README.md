@@ -11,10 +11,15 @@ Process for running the script:
 <br /> Step 3: Run [insert script name], using classification outputs of Step 3 as inputs
 
 Folder/file descriptions:
-| File/folder     | Description |    
+| File/folder name     | Description |    
 | ------------- | ------------- | 
 | scripts     |  Contains scripts to run the analyses |
 | layers     |  Contains mask for South Atlantic used in this study, biogeography layer produced for this study, and output habitat classifications for the hierarchical and non-hierarchical approaches |
+| script name 1    |  script function |
+| script name 2    |  script function |
+| script name 3    |  script function |
+| script name 4   |  script function |
+... etc
 
 Input raster datasets are available at the following sites:
 | Variable     | Description      | Manipulation     |  Source |
