@@ -19,14 +19,10 @@ install.packages(
 )
 
 
-
-
 # clear environment
 rm(list = ls())
 
 gc()
-
-
 
 #Load packages:
 
@@ -50,22 +46,15 @@ library(rgdal)
 library(tidyverse)
 library(magrittr)
 
-
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 #                                                 __Load data__                                            ========
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-
 
 wd <-"C:/Users/Nils/Documents/R/MBERC - Practicals and projects/Kirsty"
 setwd(wd)
 
 paste0(wd,"/inputs") -> rasterDir
 # Add your own rasters in there. This shoud contains the layers (rasters and shapfile) downloaded in this repository: 
-
-
-
-
-
 
 paste0(wd,"/outputs")  -> outputsDir
 # in case you dont have it yet, create the directory
@@ -76,8 +65,8 @@ paste0(outputsDir,"/NA") -> NADir
 NADir %>%  dir.create()
 
 paste0(outputsDir,"/HA") -> HADir
+# in case you dont have it yet, create the directory
 HADir %>%  dir.create()
-
 
 #Load environmental variables: # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -152,15 +141,11 @@ plot(mask)
 rworldmap::getMap(resolution = "coarse") -> continents
 
 
-
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 #                                          __Principal Component Analysis__                                ========
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-
 #PCA using "prcomp": - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
 
 gc()
 var.df <- as.data.frame(var)
@@ -168,8 +153,6 @@ var.df <- var.df[complete.cases(var.df), ]
 head(var.df)
 res.pca <- prcomp(var.df, scale = TRUE)
 summary(res.pca)
-
-
 
 #Set theme:
 theme_set(
@@ -217,7 +200,6 @@ ggsave(
   height = 7
 )
 
-
 #PCA using "raster": - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 pca <- rasterPCA(var, spca = TRUE)
@@ -250,9 +232,6 @@ for (i in 1:nlayers(pca$map)) {
   addLayer(pc, r) -> pc
 }
 
-
-
-
 # Scaled maps:
 pc_scale <-
   (pc - cellStats(pc, "min")) / (cellStats(pc, "max") - cellStats(pc, "min"))
@@ -270,7 +249,6 @@ maxlat <- max(pc.df$y + 0.2)
 
 # convert to tall format
 d <- reshape2::melt(pc.df, id = c('x', 'y'))
-
 
 # save the table 
 
@@ -306,8 +284,6 @@ ggsave(
   height = 7.5
 )
 
-
-
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 #                             #Calculate correlation between environmental variables and PCs:              ========
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -331,17 +307,11 @@ png(
 corrplot(c, method = 'square', type = 'lower')
 dev.off()
 
-
-
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 #                            #__Clustering Principal Components__                                          ========
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-
-
 #Calculate Calinski-Harabasz index:  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
 
 # turn the principla components rasters into a table
 df <- as.data.frame(scale(pc))
@@ -384,11 +354,8 @@ ggsave(
   dpi = 200
 )
 
-
 #Calculate Average Silhouette Width:  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-
- 
 pc.df <- pc.df[complete.cases(pc.df), ]
 dim(pc.df)
 head(pc.df)
@@ -424,13 +391,11 @@ crs(clara.rast) <- "+init=epsg:4326"
 plot(clara.rast)
 writeRaster(clara.rast,  paste0(outputsDir, "/", "Level1.tif"))
 
-
 #__Boxplots of cluster outputs__
 
 var.crop <- crop(var, clara.rast)
 
 s <- stack(var.crop, clara.rast)
-
 
 s.df <- as.data.frame(s)
 s.df <- s.df[complete.cases(s.df), ]
@@ -446,7 +411,6 @@ mycolors <- colorRampPalette(brewer.pal(4, "YlGnBu"))(nb.cols)
 # !! This step can results in crach as it consumes a lot of memory !!
 
 s.m %>% sample_frac(0.01) -> s.m2
-
 
 #Plot boxplots:
 ggplot(s.m2, aes(
@@ -483,8 +447,6 @@ gc()
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
 #__Decision tree__ 
-
-
 
 s<-stack(var.crop,clara.rast)
 s.df<-as.data.frame(s)
