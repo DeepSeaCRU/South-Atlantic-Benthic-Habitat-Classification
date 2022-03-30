@@ -2,7 +2,7 @@
 
 The code and files contained in this repository support replication of a regional benthic habitat classification of the South Atlantic produced by McQuaid et al. (in prep). We used statistical clustering algorithms to classify broad-scale (10km2) environmental data into distinct habitat classes, which reflect variation in physical conditions and we assume support distinct biological communities. 
 
-__Process for running the scripts:__
+<br />__Process for running the scripts:__
 * Step 1: Run the non-hierarchical approach using the script "NHApproach NP Clustering & Final Classification.R" and inputs from the table below
 * Step 2: Run Level 1 of the hierarchical approach using the script "HApproach Level1 - PCAs NP.R" and inputs from the table below
 * Step 3: Produce a confidence layer for Level 1 of the hierarchical approach using the script "HApproach Level1 - confusion Index.R"
