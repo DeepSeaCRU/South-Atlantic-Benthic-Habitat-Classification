@@ -9,6 +9,7 @@ __Process for running the scripts:__
 * Step 4: Run Level 2 of the hierarchical approach using the script "HApproach_Level2,3_RScript NP.R" and the classification outputs of Step 3 (Level 1) as inputs
 * Step 5: Adapt the script "HApproach_Level2,3_RScript NP.R" to run Level 3 of the hierarchical approach using the classification outputs of Step 4 (Level 2) as inputs
 
+
 __Folder/file descriptions:__
 | Folder/file name     | Description |    
 | ------------- | ------------- | 
@@ -18,6 +19,7 @@ __Folder/file descriptions:__
 | HApproach Level1 - PCAs NP.R   |  Data preparation, Principal Component Analysis and clustering for Level 1 of the hierarchical approach |
 | HApproach Level1 - confusion Index.R   |  Production of confidence layers using a confusion index for Level 1 outputs of the hierarchical approach |
 | HApproach_Level2,3_RScript NP.R  |  Data preparation, Principal Component Analysis and clustering for Level 2 of the hierarchical approach |
+
 
  __Input raster datasets are available at the following sites:__
 | Variable     | Description      | Manipulation     |  Source |
