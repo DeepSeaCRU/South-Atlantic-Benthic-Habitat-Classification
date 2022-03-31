@@ -1,3 +1,11 @@
+title: "Regional benthic habitat classification of the South Atlantic"
+author: "Tiago Gandra, Kirsty McQuaid, Oli Hogg & Nils Piechaud"
+date: "April 2022"
+
+
+# =================================================================================================================
+##                                    Level 1 - Calculate Confusion Index
+# =================================================================================================================
 
 
 # list packages that will be needed
