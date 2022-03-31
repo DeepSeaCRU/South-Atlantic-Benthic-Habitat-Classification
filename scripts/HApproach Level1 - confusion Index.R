@@ -172,45 +172,52 @@ for (v in var@layers) {
 
 
 
+
 # turn the 0s into NAs
-data[data==0] <- NA
+data[data == 0] <- NA
 data_na <- na.omit(data)
 # remove the ID column
-data_norm <- (scale( select(data_na, -ID), scale=TRUE)) ######## What is the number -4 for?? In Oli's code this value was his number of variables + 1. So for now have just made it my no. vars + 1
-data_norm <- as.data.frame(data_norm)
- 
+data_norm <-
+  (scale(select(data_na,-ID), scale = TRUE)) 
+
 
 #Run Principal Component Analysis and clustering:
 
 # PCA:
-data_PC <- prcomp(data_norm, scale=FALSE)
-eigen <- data_PC$sdev^2
+data_PC <- prcomp(data_norm, scale = FALSE)
+eigen <- data_PC$sdev ^ 2
 eigen # Examine eigenvalues to identify number of PCs with eigenvalues > 1
-dataPC_rotated <- psych::principal(data_norm, rotate="varimax", nfactors=4, scores=TRUE) # Change nfactors to desired number of PCs
+dataPC_rotated <-
+  psych::principal(data_norm,
+                   rotate = "varimax",
+                   nfactors = 4,
+                   scores = TRUE) # Change nfactors to desired number of PCs
 data_PCs <- dataPC_rotated$scores
 
 # Clustering:
-fit <- kmeans(data_PCs, 4, iter.max=40)
+fit <- kmeans(data_PCs, 4, iter.max = 40)
 
 # Create matrix of input data & clustering output:
 
-m <- matrix(NA, nrow(data_PCs), ncol=nrow(fit$centers))
+m <- matrix(NA, nrow(data_PCs), ncol = nrow(fit$centers))
 
-for(i in 1:nrow(data_PCs)){
-  m[i,] <- as.matrix(Dist(rbind(data_PCs[i,],  fit$centers)))[-1,1]
+for (i in 1:nrow(data_PCs)) {
+  m[i, ] <- as.matrix(Dist(rbind(data_PCs[i, ],  fit$centers)))[-1, 1]
 }
 
-mu <- matrix(NA, nrow(data_PCs), ncol=nrow(fit$centers))
+mu <- matrix(NA, nrow(data_PCs), ncol = nrow(fit$centers))
 
 # Calculate confusion index:
-for(i in 1:nrow(data_PCs)){
-  mu[i,] <- 1/m[i,]^2*1/sum(1/m[i,]^2)
+for (i in 1:nrow(data_PCs)) {
+  mu[i, ] <- 1 / m[i, ] ^ 2 * 1 / sum(1 / m[i, ] ^ 2)
 }
 
 CI <- numeric(nrow(data_PCs))
 
-for(i in 1:nrow(data_PCs)){
-  CI[i] <- mu[i,order(mu[i,], decreasing=TRUE)[2]]/mu[i,order(mu[i,], decreasing=TRUE)[1]]
+for (i in 1:nrow(data_PCs)) {
+  CI[i] <-
+    mu[i, order(mu[i, ], decreasing = TRUE)[2]] / mu[i, order(mu[i, ], decreasing =
+                                                                TRUE)[1]]
 }
 
 data_PCs2 <- data.frame(data_PCs, CI)
@@ -223,7 +230,7 @@ temp1 %>%  as.data.frame() %>%  as_tibble() %>%
   select(ID, `data_PCs2$CI`) -> d
 
 # remake the raster and include the NA cells that had been removed
-matrix1 <- matrix(nrow=nrow(data ), ncol=2)
+matrix1 <- matrix(nrow = nrow(data), ncol = 2)
 # join the CI values with the cells that have one
 matrix1 %>% as_tibble() %>%
   mutate(ID = 1:nrow(.)) %>%
@@ -234,61 +241,51 @@ matrix1 %>% as_tibble() %>%
 matrix3 <- matrix(dd$CI, nrow = nrow(var), ncol = ncol(var))
 
 #Plot and save output as raster:
-Level1_CI <- raster(matrix3, xmn=-180, xmx=180, ymn=-90, ymx=90)
+Level1_CI <- raster(
+  matrix3,
+  xmn = -180,
+  xmx = 180,
+  ymn = -90,
+  ymx = 90
+)
 plot(Level1_CI)
 crs(Level1_CI) <- "+init=epsg:4326"
-writeRaster(Level1_CI, filename= paste0(HADir,"/" ,"Level1_CI.tif") )
+writeRaster(Level1_CI, filename = paste0(HADir, "/" , "Level1_CI.tif"))
 
-#__Crop outputs to South Atlantic study area:__
+System.time()
+
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+#                         #__Crop outputs to South Atlantic study area:__                                  ========
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
 
 #Load mask of South Atlantic:
-SAmask <- readOGR( paste0(rasterDir , "/", "Mask_SouthAtlantic.shp") )
-#Crop classification Level 1:
+SAmask <-
+  readOGR(paste0(rasterDir , "/", "Mask_SouthAtlantic.shp"))
+#Crop classification Level 1: - - - - -  - - - - -  - - - - -  - - - - -  - - - - -  - - - - -
 
 level1 <- clara.rast
 level1.crop <- crop(level1, SAmask)
 level1 <- mask(level1.crop, SAmask)
+# plot map of the results results
 plot(level1)
-writeRaster(level1, paste0(HADir,"/","Level1_SAtlant.tif" ), overwrite=TRUE )
+plot(continents, add = T, col = "grey")
+# Export
+writeRaster(level1, paste0(HADir, "/", "Level1_SAtlant.tif"), overwrite =
+              TRUE)
 
-#Crop confidence map Level 1:
-
+#Crop confidence map Level 1: - - - - -  - - - - -  - - - - -  - - - - -  - - - - -  - - - - -
 Level1_CI.crop <- crop(Level1_CI, SAmask)
 Level1_CI <- mask(Level1_CI.crop, SAmask)
+
+# plot map of the results results
 plot(Level1_CI)
-writeRaster(Level1_CI,  paste0(HADir,"/","Level1_CI_SAtlant.tif" ), overwrite=TRUE  )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+plot(continents, add = T, col = "grey")
+# Export
+writeRaster(Level1_CI,
+            paste0(HADir, "/", "Level1_CI_SAtlant.tif"),
+            overwrite = TRUE)
 
 
 
