@@ -55,10 +55,11 @@ library(magrittr)
 #                                                 __Load data__                                            ========
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
+# enter the pathway
+wd <-"C:/your/pathway/here"
+# if you are using the Github repo in an Rstudio project, the WD is set for you
+# wd <- getwd() # get the path to the the WD
 
-
-
-wd <-"C:/Users/Nils/Documents/R/MBERC - Practicals and projects/Kirsty"
 setwd(wd)
 
 
