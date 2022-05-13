@@ -30,7 +30,7 @@ The code and files contained in this repository support replication of a regiona
 | Slope  | Gradient, or rate of maximum change in z-value | Created in ArcGIS from depth data using Benthic Terrain Modeler extension | https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/   |
 | Salinity | Mean benthic salinity at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/ |
 | Temperature | Mean benthic temperature at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/  |
-| Productivity| Mean particulate organic carbon ﬂux to seafloor for the period 2006-2015 | Output from the MEDUSA model (Yool et al. 2013) regridded from ORCA0083 to NEMO 5 arc min | TBC |
+| Productivity| Mean particulate organic carbon ﬂux to seafloor for the period 2006-2015 | Output from the MEDUSA model (Yool et al. 2013) regridded from ORCA0083 to NEMO 5 arc min | https://zenodo.org/record/6513616#.Yn6TGx1BzIU |
 | Dissolved oxygen | Mean benthic dissolved oxygen concentration at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/ |
 | Nitrate | Mean benthic nitrate concentration at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/  |
 | Phosphate | Mean benthic phosphate concentration at mean depth for the period 2000-2014| NA | https://www.bio-oracle.org/ |
