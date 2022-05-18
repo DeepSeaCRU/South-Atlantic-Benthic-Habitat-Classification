@@ -3,7 +3,7 @@
 The code and files contained in this repository support replication of a regional benthic habitat classification of the South Atlantic produced by McQuaid et al. (in prep). We used statistical clustering algorithms to classify broad-scale (10km2) environmental data into distinct habitat classes, which reflect variation in physical conditions and we assume support distinct biological communities. 
 
 We request that any use of the input data is referenced as per table below, and that outputs are referenced as:
-McQuaid K. A. Bridges A. E. H., Gandra T. B. R., de Souza V., Currie J. C., Hogg O. T., Pearman T. R. R., Bell J. B. B., Atkinson L. J., Baum D., Bonetti J., Carranza A., Defeo O., Gasalla M. A., Golding N, Hampton S. L., Horta S., Jones D. O. B., Lombard A. T., Manca E., Marin Y., Martin S., Passdore C., Piechaud N., Sink K. J., Yool A. & Howell K. L. Regional benthic habitat classification of the South Atlantic. In prep.
+McQuaid K. A. Bridges A. E. H., Gandra T. B. R., de Souza V., Currie J. C., Hogg O. T., Pearman T. R. R., Bell J. B. B., Atkinson L. J., Baum D., Bonetti J., Carranza A., Defeo O., Furey T., Gasalla M. A., Golding N, Hampton S. L., Horta S., Jones D. O. B., Lombard A. T., Manca E., Marin Y., Martin S., Passdore C., Piechaud N., Sink K. J., Yool A. & Howell K. L. Regional benthic habitat classification of the South Atlantic. In prep.
 
 <br />__Process for running the scripts:__
 * Step 1: Run the non-hierarchical approach using the script "NHApproach NP Clustering & Final Classification.R" and inputs from the table below
