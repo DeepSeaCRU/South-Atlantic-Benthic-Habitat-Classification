@@ -1,4 +1,4 @@
-title: "Regional benthic habitat classification of the South Atlantic"
+title: "Broad-scale benthic habitat classification of the South Atlantic"
 author: "Tiago Gandra, Kirsty McQuaid, Oli Hogg & Nils Piechaud"
 date: "April 2022"
 
