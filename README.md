@@ -18,7 +18,7 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 | ------------- | ------------- | 
 | scripts     |  Folder containing scripts to run the analyses |
 | inputs     |  Folder containing mask for South Atlantic used in this study and biogeography layer produced and used in this study |
-| outputs     |  Folder containing outputs of the hierarchical and non-hierarchical approaches. This includes intial clustering outputs of non-hierarhical approach; final non-hierarchical classification; Levels 1 to 3 of the hierarchical approach; and confusion index maps for each approach |
+| outputs     |  Folder containing outputs of the hierarchical and non-hierarchical approaches. This includes initial clustering outputs of non-hierarhical approach; final non-hierarchical classification; Levels 1 to 3 of the hierarchical approach; and confusion index maps for each approach |
 | NHApproach NP Clustering & Final Classification.R    |  R script for data preparation, clustering, final classification and production of confidence layers for the non-hierarchical approach |
 | HApproach Level1 - PCAs NP.R   |  R script for data preparation, Principal Component Analysis and clustering for Level 1 of the hierarchical approach |
 | HApproach Level1 - confusion Index.R   |  R script for production of confidence layers using a confusion index for Level 1 outputs of the hierarchical approach |
@@ -43,8 +43,8 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 | Biogeography | Biogeographic provinces | Developed using the outputs of water mass structure analysis (see non-hierarchical approach in paper) and published biogeographic classifications where possible (e.g. Vinogradova, 1997; Watling et al., 2013; Zezina, 1997) |  See folder of input data layers  |
 
 <br /> __Also included in this repository are output data layers. These are:__
-| Filename     | Description      | Source     |  
-| ------------- | ------------- | -------- |
+| Filename     | Description      | 
+| ------------- | ------------- | 
 | ????? | Initial outputs of non-hierarchical approach: Clustering of FBPI, BBPI and slope to produce a topography layer | 
 | ????? | Initial outputs of non-hierarchical approach: Clustering of POC flux to the seafloor to produce a productivity layer | 
 | ????? | Initial outputs of non-hierarchical approach: Clustering of salinity and temperature to produce a water mass structure layer |
