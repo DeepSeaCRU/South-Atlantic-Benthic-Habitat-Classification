@@ -17,7 +17,8 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 | Folder/file name     | Description |    
 | ------------- | ------------- | 
 | scripts     |  Folder containing scripts to run the analyses |
-| inputs     |  Folder containing mask for South Atlantic used in this study, biogeography layer produced for this study, and output habitat classifications for the hierarchical and non-hierarchical approaches |
+| inputs     |  Folder containing mask for South Atlantic used in this study and biogeography layer produced and used in this study |
+| outputs     |  Folder containing outputs of the hierarchical and non-hierarchical approaches. This includes intial clustering outputs of non-hierarhical approach; final non-hierarchical classification; Levels 1 to 3 of the hierarchical approach; and confusion index maps for each approach |
 | NHApproach NP Clustering & Final Classification.R    |  R script for data preparation, clustering, final classification and production of confidence layers for the non-hierarchical approach |
 | HApproach Level1 - PCAs NP.R   |  R script for data preparation, Principal Component Analysis and clustering for Level 1 of the hierarchical approach |
 | HApproach Level1 - confusion Index.R   |  R script for production of confidence layers using a confusion index for Level 1 outputs of the hierarchical approach |
@@ -39,7 +40,7 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 | Phosphate | Mean benthic phosphate concentration at mean depth for the period 2000-2014| NA | https://www.bio-oracle.org/ |
 | Silicate | Mean benthic silicate concentration at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/  |
 | Current velocity |  Mean benthic current velocity at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/  |
-| Biogeography | Biogeographic provinces | Developed using the outputs of water mass structure analysis (see non-hierarchical approach in paper) and published biogeographic classifications where possible (e.g. Vinogradova, 1997; Watling et al., 2013; Zezina, 1997) |  See folder of output data layers  |
+| Biogeography | Biogeographic provinces | Developed using the outputs of water mass structure analysis (see non-hierarchical approach in paper) and published biogeographic classifications where possible (e.g. Vinogradova, 1997; Watling et al., 2013; Zezina, 1997) |  See folder of input data layers  |
 
 <br /> __Also included in this repository are output data layers. These are:__
 | Filename     | Description      | Source     |  
