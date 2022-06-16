@@ -23,6 +23,18 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 | HApproach Level1 - PCAs NP.R   |  R script for data preparation, Principal Component Analysis and clustering for Level 1 of the hierarchical approach |
 | HApproach Level1 - confusion Index.R   |  R script for production of confidence layers using a confusion index for Level 1 outputs of the hierarchical approach |
 | HApproach_Level2,3_RScript NP.R  |  R script for data preparation, Principal Component Analysis and clustering for Level 2 of the hierarchical approach |
+| BiogeographicRegions.tif | Developed using the outputs of water mass structure analysis (see non-hierarchical approach in paper) and published biogeographic classifications where possible (e.g. Vinogradova, 1997; Watling et al., 2013; Zezina, 1997) | 
+| ????? | Initial outputs of non-hierarchical approach: Clustering of FBPI, BBPI and slope to produce a topography layer | 
+| ????? | Initial outputs of non-hierarchical approach: Clustering of POC flux to the seafloor to produce a productivity layer | 
+| ????? | Initial outputs of non-hierarchical approach: Clustering of salinity and temperature to produce a water mass structure layer |
+| ????? | Final non-hierarchical classification, produce through combining outputs of initial clustering listed above |
+| ????? | Confusion index (= confidence map) for non-hierarchical topography layer |
+| ????? | Confusion index (= confidence map) for non-hierarchical productivity layer |
+| ????? | Confusion index (= confidence map) for non-hierarchical water mass structure layer |
+| ????? | Hierarchical classification Level 1, produced through performing PCA on environmental variables & clustering of resultant PCs |
+| ????? | Hierarchical classification Level 2, produced through performing PCA on environmental variables for each cluster of Level 1 & clustering of resultant PCs |
+| ????? | Hierarchical classification Level 2, produced through performing PCA on environmental variables for each cluster of Level 2 & clustering of resultant PCs |
+| ????? | Confusion index (= confidence map) for hierarchical classification Level 1 |
 
  
 <br /> __Input raster datasets are available at the following sites:__
@@ -40,19 +52,4 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 | Phosphate | Mean benthic phosphate concentration at mean depth for the period 2000-2014| NA | https://www.bio-oracle.org/ |
 | Silicate | Mean benthic silicate concentration at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/  |
 | Current velocity |  Mean benthic current velocity at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/  |
-| Biogeography | Biogeographic provinces | Developed using the outputs of water mass structure analysis (see non-hierarchical approach in paper) and published biogeographic classifications where possible (e.g. Vinogradova, 1997; Watling et al., 2013; Zezina, 1997) |  See folder of input data layers  |
-
-<br /> __Also included in this repository are output data layers. These are:__
-| Filename     | Description      | 
-| ------------- | ------------- | 
-| ????? | Initial outputs of non-hierarchical approach: Clustering of FBPI, BBPI and slope to produce a topography layer | 
-| ????? | Initial outputs of non-hierarchical approach: Clustering of POC flux to the seafloor to produce a productivity layer | 
-| ????? | Initial outputs of non-hierarchical approach: Clustering of salinity and temperature to produce a water mass structure layer |
-| ????? | Final non-hierarchical classification, produce through combining outputs of initial clustering listed above |
-| ????? | Confusion index (= confidence map) for non-hierarchical topography layer |
-| ????? | Confusion index (= confidence map) for non-hierarchical productivity layer |
-| ????? | Confusion index (= confidence map) for non-hierarchical water mass structure layer |
-| ????? | Hierarchical classification Level 1, produced through performing PCA on environmental variables & clustering of resultant PCs |
-| ????? | Hierarchical classification Level 2, produced through performing PCA on environmental variables for each cluster of Level 1 & clustering of resultant PCs |
-| ????? | Hierarchical classification Level 2, produced through performing PCA on environmental variables for each cluster of Level 2 & clustering of resultant PCs |
-| ????? | Confusion index (= confidence map) for hierarchical classification Level 1 |
+| Biogeography | Biogeographic regions | Developed using the outputs of water mass structure analysis (see non-hierarchical approach in paper) and published biogeographic classifications where possible (e.g. Vinogradova, 1997; Watling et al., 2013; Zezina, 1997) |  See folder of input data layers  |
