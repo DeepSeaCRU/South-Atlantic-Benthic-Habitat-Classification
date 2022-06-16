@@ -23,6 +23,7 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 | HApproach Level1 - PCAs NP.R   |  R script for data preparation, Principal Component Analysis and clustering for Level 1 of the hierarchical approach |
 | HApproach Level1 - confusion Index.R   |  R script for production of confidence layers using a confusion index for Level 1 outputs of the hierarchical approach |
 | HApproach_Level2,3_RScript NP.R  |  R script for data preparation, Principal Component Analysis and clustering for Level 2 of the hierarchical approach |
+| Mask_SouthAtlantic.shp | Mask of the South Atlantic used in this study. The boundaries come from the International Hydrographic Organization’s definition of the South Atlantic (Flanders Marine Institute, 2020), but are extended north, south, and east to include the entire EEZs of Brazil, South Georgia and the South Sandwich Islands, and South Africa, respectively. |
 | BiogeographicRegions.tif | Developed using the outputs of water mass structure analysis (see non-hierarchical approach in paper) and published biogeographic classifications where possible (e.g. Vinogradova, 1997; Watling et al., 2013; Zezina, 1997) | 
 | ????? | Initial outputs of non-hierarchical approach: Clustering of FBPI, BBPI and slope to produce a topography layer | 
 | ????? | Initial outputs of non-hierarchical approach: Clustering of POC flux to the seafloor to produce a productivity layer | 
