@@ -18,26 +18,14 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 | ------------- | ------------- | 
 | scripts     |  Folder containing scripts to run the analyses |
 | inputs     |  Folder containing mask for South Atlantic used in this study and biogeography layer produced and used in this study |
-| outputs     |  Folder containing outputs of the hierarchical and non-hierarchical approaches. This includes initial clustering outputs of non-hierarhical approach; final non-hierarchical classification; Levels 1 to 3 of the hierarchical approach; and confusion index maps for each approach |
 | NHApproach NP Clustering & Final Classification.R    |  R script for data preparation, clustering, final classification and production of confidence layers for the non-hierarchical approach |
 | HApproach Level1 - PCAs NP.R   |  R script for data preparation, Principal Component Analysis and clustering for Level 1 of the hierarchical approach |
 | HApproach Level1 - confusion Index.R   |  R script for production of confidence layers using a confusion index for Level 1 outputs of the hierarchical approach |
 | HApproach_Level2,3_RScript NP.R  |  R script for data preparation, Principal Component Analysis and clustering for Level 2 of the hierarchical approach |
 | Mask_SouthAtlantic.shp | Mask of the South Atlantic used in this study. The boundaries come from the International Hydrographic Organization’s definition of the South Atlantic (Flanders Marine Institute, 2020), but are extended north, south, and east to include the entire EEZs of Brazil, South Georgia and the South Sandwich Islands, and South Africa, respectively. |
 | BiogeographicRegions.tif | Developed using the outputs of water mass structure analysis (see non-hierarchical approach in paper) and published biogeographic classifications where possible (e.g. Vinogradova, 1997; Watling et al., 2013; Zezina, 1997) | 
-| ????? | Initial outputs of non-hierarchical approach: Clustering of FBPI, BBPI and slope to produce a topography layer | 
-| ????? | Initial outputs of non-hierarchical approach: Clustering of POC flux to the seafloor to produce a productivity layer | 
-| ????? | Initial outputs of non-hierarchical approach: Clustering of salinity and temperature to produce a water mass structure layer |
-| ????? | Final non-hierarchical classification, produce through combining outputs of initial clustering listed above |
-| ????? | Confusion index (= confidence map) for non-hierarchical topography layer |
-| ????? | Confusion index (= confidence map) for non-hierarchical productivity layer |
-| ????? | Confusion index (= confidence map) for non-hierarchical water mass structure layer |
-| ????? | Hierarchical classification Level 1, produced through performing PCA on environmental variables & clustering of resultant PCs |
-| ????? | Hierarchical classification Level 2, produced through performing PCA on environmental variables for each cluster of Level 1 & clustering of resultant PCs |
-| ????? | Hierarchical classification Level 2, produced through performing PCA on environmental variables for each cluster of Level 2 & clustering of resultant PCs |
-| ????? | Confusion index (= confidence map) for hierarchical classification Level 1 |
 
- 
+
 <br /> __Input raster datasets are available at the following sites:__
 | Variable     | Description      | Manipulation     |  Source |
 | ------------- | ------------- | -------- |  -------- |
