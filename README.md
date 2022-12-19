@@ -18,6 +18,7 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 | ------------- | ------------- | 
 | scripts     |  Folder containing scripts to run the analyses |
 | inputs     |  Folder containing mask for South Atlantic used in this study and biogeography layer produced and used in this study |
+| outputs     |  Folder containing a link to download the final habitat classifications produced in this study |
 | NHApproach NP Clustering & Final Classification.R    |  R script for data preparation, clustering, final classification and production of confidence layers for the non-hierarchical approach |
 | HApproach Level1 - PCAs NP.R   |  R script for data preparation, Principal Component Analysis and clustering for Level 1 of the hierarchical approach |
 | HApproach Level1 - confusion Index.R   |  R script for production of confidence layers using a confusion index for Level 1 outputs of the hierarchical approach |
