@@ -30,16 +30,16 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 <br /> __Input raster datasets are available at the following sites:__
 | Variable     | Description      | Manipulation     |  Source |
 | ------------- | ------------- | -------- |  -------- |
-| Depth  | Continuous bathymetric model | Resampled to 5 arc min resolution |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
-| BBPI  | Measure of where a referenced location is relative to the locations surrounding it |Created in ArcGIS from depth data using Benthic Terrain Modeler extension. Inner radius 1, outer radius 10, scale factor is ∼100km |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
-| FBPI  | Measure of where a referenced location is relative to the locations surrounding it | Created in ArcGIS from depth data using Benthic Terrain Modeler extension. Inner radius 1, outer radius 2, scale factor is ∼10km | https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/  |
-| Slope  | Gradient, or rate of maximum change in z-value | Created in ArcGIS from depth data using Benthic Terrain Modeler extension | https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/   |
-| Salinity | Mean benthic salinity at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/ |
-| Temperature | Mean benthic temperature at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/  |
-| Productivity| Mean particulate organic carbon ﬂux to seafloor for the period 2006-2015 | Output from the MEDUSA model (Yool et al. 2013) regridded from ORCA0083 to NEMO 5 arc min | https://zenodo.org/record/6513616#.Yn6TGx1BzIU |
-| Dissolved oxygen | Mean benthic dissolved oxygen concentration at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/ |
-| Nitrate | Mean benthic nitrate concentration at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/  |
-| Phosphate | Mean benthic phosphate concentration at mean depth for the period 2000-2014| NA | https://www.bio-oracle.org/ |
-| Silicate | Mean benthic silicate concentration at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/  |
-| Current velocity |  Mean benthic current velocity at mean depth for the period 2000-2014 | NA | https://www.bio-oracle.org/  |
-| Biogeography | Biogeographic regions | Developed using the outputs of water mass structure analysis (see non-hierarchical approach in paper) and published biogeographic classifications where possible (e.g. Vinogradova, 1997; Watling et al., 2013; Zezina, 1997) |  See folder of input data layers  |
+| Depth  | Continuous bathymetric model | Resample to 5 arc min resolution |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
+| BBPI  | Measure of where a referenced location is relative to the locations surrounding it | Create in ArcGIS using Benthic Terrain Modeler extension and depth data. Inner radius 1, outer radius 10 (gives a scale factor = ∼100km) |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
+| FBPI  | Measure of where a referenced location is relative to the locations surrounding it | Create in ArcGIS using Benthic Terrain Modeler extension and depth data. Inner radius 1, outer radius 2 (gives a scale factor = ∼10km) | https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/  |
+| Slope  | Gradient, or rate of maximum change in z-value | Create in ArcGIS using Benthic Terrain Modeler extension and depth data | https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/   |
+| Salinity | Mean benthic salinity at mean depth for the period 2000-2014 | None | https://www.bio-oracle.org/ |
+| Temperature | Mean benthic temperature at mean depth for the period 2000-2014 | None | https://www.bio-oracle.org/  |
+| Productivity| Mean particulate organic carbon ﬂux to seafloor for the period 2006-2015. This is an output from the MEDUSA model (Yool et al. 2013) regridded from ORCA0083 to NEMO 5 arc min | None | https://zenodo.org/record/6513616#.Yn6TGx1BzIU |
+| Dissolved oxygen | Mean benthic dissolved oxygen concentration at mean depth for the period 2000-2014 | None | https://www.bio-oracle.org/ |
+| Nitrate | Mean benthic nitrate concentration at mean depth for the period 2000-2014 | None | https://www.bio-oracle.org/  |
+| Phosphate | Mean benthic phosphate concentration at mean depth for the period 2000-2014| None | https://www.bio-oracle.org/ |
+| Silicate | Mean benthic silicate concentration at mean depth for the period 2000-2014 | None | https://www.bio-oracle.org/  |
+| Current velocity |  Mean benthic current velocity at mean depth for the period 2000-2014 | None | https://www.bio-oracle.org/  |
+| Biogeography | Biogeographic regions developed using the outputs of water mass structure analysis (see non-hierarchical approach in paper) and published biogeographic classifications where possible (e.g. Vinogradova, 1997; Watling et al., 2013; Zezina, 1997) | None |  See folder of input data layers  |
