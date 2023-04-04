@@ -32,7 +32,7 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 | ------------- | ------------- | -------- |  -------- |
 | Depth  | Continuous bathymetric model | Resample to 5 arc min resolution |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
 | BBPI  | Measure of where a referenced location is relative to the locations surrounding it | Create in ArcGIS using Benthic Terrain Modeler extension and depth data. Inner radius 1, outer radius 10 (gives a scale factor = ∼100km) |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
-| FBPI  | Measure of where a referenced location is relative to the locations surrounding it | Create in ArcGIS using Benthic Terrain Modeler extension and depth data. Inner radius 1, outer radius 2 (gives a scale factor = ∼10km) | https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/  |
+| FBPI  | Measure of where a referenced location is relative to the locations surrounding it | Create in ArcGIS using Benthic Terrain Modeler extension and depth data. Inner radius 1, outer radius 2 (gives a scale factor = ∼20km) | https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/  |
 | Slope  | Gradient, or rate of maximum change in z-value | Create in ArcGIS using Benthic Terrain Modeler extension and depth data | https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/   |
 | Salinity | Mean benthic salinity at mean depth for the period 2000-2014 | None | https://www.bio-oracle.org/ |
 | Temperature | Mean benthic temperature at mean depth for the period 2000-2014 | None | https://www.bio-oracle.org/  |
