@@ -28,7 +28,7 @@ McQuaid K. A. Bridges A. E. H., Howell K. L., Gandra T. B. R., de Souza V., Curr
 
 
 <br /> __Input raster datasets are available at the following sites:__
-| Variable     | Description      | Manipulation     |  Source |
+| Variable     | Description      | Manipulation required     |  Source |
 | ------------- | ------------- | -------- |  -------- |
 | Depth  | Continuous bathymetric model | Resample to 5 arc min resolution |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
 | BBPI  | Measure of where a referenced location is relative to the locations surrounding it | Create in ArcGIS using Benthic Terrain Modeler extension and depth data. Inner radius 1, outer radius 10 (gives a scale factor = ∼100km) |  https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2020/ |
